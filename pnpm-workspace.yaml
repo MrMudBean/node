@@ -1,0 +1,4 @@
+allowBuilds:
+  unrs-resolver: true
+#  禁止检测
+minimumReleaseAge: 0

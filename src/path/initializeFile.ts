@@ -1,0 +1,29 @@
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { dog } from '../utils/dog';
+import { getCallerFilename } from './getCallerFileInfo';
+import { isWindows } from './isWindows';
+
+/**
+ * # 初始化 `__filename` 和 `__dirname`
+ *
+ * @returns   [__filename,__dirname]
+ */
+export function initializeFile(): [string, string] {
+  /** 文件地址  */
+  let a: string;
+  /** 文件躲在目录地址  */
+  try {
+    new Function('import("")');
+    a = fileURLToPath(import.meta.url);
+  } catch (error) {
+    dog.error(error);
+    a = __filename;
+  }
+  if (isWindows) {
+    a = a.replace(/\\/gm, '/');
+  }
+  a = getCallerFilename(a);
+  const b: string = dirname(a);
+  return [a, b];
+}

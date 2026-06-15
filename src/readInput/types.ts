@@ -1,0 +1,80 @@
+/** 导出这个子项的类型声明 */
+export type ReadInputListItem = {
+  /**  唯一键  */
+  key: symbol;
+  /**  用户的参数  */
+  callback: ReadInputParam;
+  /**  向用户发送结果数据  */
+  resolve: (result: boolean) => void;
+};
+
+export type DataStore = {
+  /**  按序执行列表  */
+  list: symbol[];
+  /**  事件是否已执行监听  */
+  listened: boolean;
+  /**  注册动作
+   *  添加二点监听项
+   *
+   * 通过判断当前 callList 的长度知晓当前是否正在执行
+   *
+   * 长度为 0 则触发回调开始执行
+   */
+  on(
+    /**  唯一 key  */
+    key: symbol,
+    /**  用户回调  */
+    callback: ReadInputParam,
+    /**  Promise 的 resolve   */
+    resolve: (result: boolean) => void,
+  ): ReadInputListItem;
+  /**  移除当前执行的动作  */
+  remove(): void;
+  /**  移除项  */
+  del(key: symbol): boolean;
+} & {
+  /**  无序的数据  */
+  [x: symbol]: ReadInputListItem;
+};
+
+/**  具体的键值（前提是需要有键值才会有具体的键值）  */
+export type ReadInputKey =
+  | {
+      /**
+       * 按键名称
+       *
+       * 在 mac 上特殊字符返回的 name 为 undefined ，如：“`” 、数字上上键、符号键
+       *
+       * */
+      name: string | string;
+      /**  是否按下了 `Ctrl` 键  */
+      ctrl: boolean;
+      /**  是否按下了 `Meta` 键  */
+      meta: boolean;
+      /**  是否按下了 `shift` 键  */
+      shift: boolean;
+      /** 按键的原始字符和转义序列  */
+      sequence: string;
+    }
+  | undefined;
+
+/**  用户回调  */
+export type ReadInputParam = (
+  /**  在 mac 上使用  `ESC`、`Delete` 键会返回 undefined */
+  keyValue: string | undefined,
+  /**  返回的键值详细信息  */
+  key: ReadInputKey,
+) => boolean;
+
+export type ReadInput = {
+  (_callback: ReadInputParam, key?: symbol): Promise<boolean>;
+} & {
+  /**
+   *
+   * 移除某键在 readInput 中的列表数据
+   *
+   * - 请保证你获得了正确的该 key 值（通常是在创建 readInput 时传入）
+   * - 若使用该值，即便当前项在 readInput 中为当前执行项，也会被立刻移除。
+   */
+  remove(key: symbol): boolean;
+};

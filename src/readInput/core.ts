@@ -1,0 +1,31 @@
+import { getRandomString, isNode } from '@mudbean/utils';
+import { dataStore } from './dataStore';
+import { ReadInputParam } from './types';
+
+/**
+ * #  核心逻辑
+ * @param _callback
+ * @param key
+ */
+export async function readInputCore(
+  _callback: ReadInputParam,
+  key?: symbol,
+): Promise<boolean> {
+  if (!isNode()) {
+    throw new RangeError('当前环境不支持 readInput');
+  }
+
+  /** 获取唯一的 key， 用于向数据仓储中添加本次调用的 key  */
+  const uniKey = key ?? Symbol(getRandomString(3));
+
+  return new Promise(resolve => {
+    /**  注册事件
+     *
+     * 并在注册时指定当前是否开始或者是结束
+     *
+     * 将 process.stdout.keypress  事件放到回调中执行,然后再合适的时候再注销掉该事件
+     *
+     */
+    dataStore.on(uniKey, _callback, resolve);
+  });
+}
