@@ -1,4 +1,4 @@
-import { getRandomString, isNode } from '@mudbean/utils';
+import { getRandomString, isNode } from '@vvi/utils';
 import { dataStore } from './dataStore';
 import { ReadInputParam } from './types';
 
@@ -19,12 +19,11 @@ export async function readInputCore(
   const uniKey = key ?? Symbol(getRandomString(3));
 
   return new Promise(resolve => {
-    /**  注册事件
-     *
+    /**
+     * # 注册事件
      * 并在注册时指定当前是否开始或者是结束
      *
      * 将 process.stdout.keypress  事件放到回调中执行,然后再合适的时候再注销掉该事件
-     *
      */
     dataStore.on(uniKey, _callback, resolve);
   });

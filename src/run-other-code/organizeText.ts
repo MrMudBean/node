@@ -3,8 +3,7 @@ import { isWindows } from '../path';
 import { WaitingTipsResult } from '../waiting';
 
 /**
- *
- * 整理数据
+ * # 整理数据
  *
  * @param value
  * @param printLog

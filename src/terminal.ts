@@ -1,4 +1,4 @@
-import { isFalse, isUndefined } from '@mudbean/is';
+import { isFalse, isUndefined } from '@vvi/is';
 import { __p } from './cursor';
 /**
  *  终端页面翻动

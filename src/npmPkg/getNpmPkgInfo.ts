@@ -7,7 +7,7 @@ import {
   npmPkgInfoType,
   npmRegistry,
 } from './types';
-import { isUndefined } from '@mudbean/is';
+import { isUndefined } from '@vvi/is';
 
 /**
  * # 获取给定 npm 包的内容的信息

@@ -1,7 +1,7 @@
 import { execSync } from 'node:child_process';
 
 import { dog } from './utils/dog';
-import { isNode } from '@mudbean/utils';
+import { isNode } from '@vvi/utils';
 
 /**
  *  # 当前是否是终端

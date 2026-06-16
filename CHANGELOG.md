@@ -137,7 +137,7 @@ if (result.isSIGINT) {
 
 ## v4.2.4 (2025-6-3)
 
-- 修复 `readInput` 的监听事件（该事件是测试时随手写上的，忘了注释或删除），导致在多次调用该函数后，导致的多次监听的警告
+- 修复 `readInput` 的事件代理（该事件是测试时随手写上的，忘了注释或删除），导致在多次调用该函数后，导致的多次代理的警告
 
 ```text
  MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 end listeners added to [ReadStream]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
@@ -155,7 +155,7 @@ if (result.isSIGINT) {
 
 ## v4.2.1 （5 🈷️ 26 日 2025 年）
 
-- 为 `readInput` 添加 `remove` 的方法，可手动从外部移除已添加到等待输入列表的终端输入监听
+- 为 `readInput` 添加 `remove` 的方法，可手动从外部移除已添加到等待输入列表的终端输入代理
 - 为 `waitingTips` 添加了双击 `ESC` 键退出的功能，防止在部分时候未调用 `destroyed` 导致的进程无法退出
 
 ## v4.2.0 （5 🈷️ 24 日 2025 年）
@@ -172,7 +172,7 @@ if (result.isSIGINT) {
 
 ## v4.1.1-beta.0 （5 🈷️ 18 日 2025 年）
 
-更改了 `readInput` 的监听输入的方式，自己先在 [a-command](https://www.npmjs.com/package/a-command) 测试一下
+更改了 `readInput` 输入代理的方式，自己先在 [a-command](https://www.npmjs.com/package/a-command) 测试一下
 
 ## v4.1.0 （5 🈷️ 14 日 2025 年）
 

@@ -1,12 +1,11 @@
-import { bgBrightMagentaPen } from '@mudbean/pen';
+import { bgBrightMagentaPen } from '@vvi/pen';
 import { dog } from '../utils/dog';
 import { WaitingTipsResult } from '../waiting';
 import { organizeText } from './organizeText';
 import { DataStore } from './types';
 
 /**
- *
- * 标准输出流触发的事件
+ * # 标准输出流触发的事件
  *
  * @param value
  * @param dataStore

@@ -13,7 +13,7 @@ import { isExist } from './isExist';
  * @example
  *
  * ```ts
- * import { isEmpty } from '@mudbean/node';
+ * import { isEmpty } from '@vvi/node';
  *
  * isEmpty('src/index.ts'); // -1
  * ```

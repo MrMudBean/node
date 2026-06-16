@@ -6,10 +6,10 @@
  * @license MIT
  * @copyright  2026 ©️ MrMudBean
  * @since 2026-01-11 11:11
- * @lastModified 2026-06-15 10:36
+ * @lastModified 2026-06-16 15:42
  */
 
-import { isNumber, isString, isUndefined } from '@mudbean/is';
+import { isNumber, isString, isUndefined } from '@vvi/is';
 import type { PackageJson } from '../npmPkg';
 import type { DefaultT } from '../npmPkg/types';
 import { getDirectoryBy } from '../path/getDirectoryBy';
@@ -156,7 +156,7 @@ export async function getPackageJson<T extends DefaultT>(
 }
 
 /**
- *
+ * # 解析参数
  * @param params 将要解析的参数
  * @returns 解析后的参数
  */

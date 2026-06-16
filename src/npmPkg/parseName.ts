@@ -1,4 +1,4 @@
-import { isString } from '@mudbean/is';
+import { isString } from '@vvi/is';
 
 /**
  * # 解析名称

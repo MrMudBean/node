@@ -3,13 +3,12 @@ import { resolve } from 'node:path/posix';
 import { isEmptyDir } from '../file';
 import { dog } from '../utils/dog';
 import { DataStore, RunOtherCodeOption } from './types';
-import { isFalse, isString } from '@mudbean/is';
-import { cyanPen, redPen } from '@mudbean/pen';
-import { isNode } from '@mudbean/utils';
+import { isFalse, isString } from '@vvi/is';
+import { cyanPen, redPen } from '@vvi/pen';
+import { isNode } from '@vvi/utils';
 
 /**
- *
- * 解析参数
+ * # 解析参数
  * @param options
  * @param dataStore
  */

@@ -1,4 +1,4 @@
-import { isBrowser, isNode } from '@mudbean/utils';
+import { isBrowser, isNode } from '@vvi/utils';
 
 /**
  * # 是否是 [windows](https://nodejs.org/docs/latest/api/path.html) 系统

@@ -1,12 +1,12 @@
-import { isPromise, isTrue, isUndefined } from '@mudbean/is';
+import { isPromise, isTrue, isUndefined } from '@vvi/is';
 import {
   cutoffStringWithChar,
   cyanPen,
   magentaPen,
   strInOneLineOnTerminal,
   strInTerminalLength,
-} from '@mudbean/pen';
-import { esc } from '@mudbean/pen-static';
+} from '@vvi/pen';
+import { esc } from '@vvi/pen-static';
 import {
   cursorAfterClear,
   cursorHide,
@@ -66,8 +66,8 @@ export class WaitingTipsResult {
     cursorMoveLeft(Infinity); /// 移动到最左边
     cursorAfterClear(); /// 🧹光标后的内容，避免出现打印残留
     /// 返回之前将光标展示出来
-    process.removeListener('exit', exitCall); // 禁止多监听未移除导致程序报错
-    process.removeListener('SIGINT', sigintCall); // 移除监听
+    process.removeListener('exit', exitCall); // 禁止多代理未移除导致程序报错
+    process.removeListener('SIGINT', sigintCall); // 移除代理
     cursorShow(); // 恢复光标
     this.#logList.forEach(e => this.#originLog(...e));
     this.#logList.length = 0; /// 释放未完成的打印

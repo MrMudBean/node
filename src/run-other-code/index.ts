@@ -6,8 +6,7 @@ import {
 } from './types';
 
 /**
- *
- * ## 运行其他简单的命令
+ * # 运行其他简单的命令
  * @param options  { code:string , cwd: string, callback:()=> void}
  * @returns  返回一个 Promise
  *    - 返回值包含执行的信息。
@@ -61,9 +60,7 @@ import {
  *
  *  // 如果程序是由于 SIGINT （常见的场景为 `Ctrl` + `C`）中断
  *  _p(result.isSIGINT); // true
- *
  * ```
- *
  */
 export const runOtherCode = (options: RunOtherCodeOption) =>
   runOtherCodeCore(options);

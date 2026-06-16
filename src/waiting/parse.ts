@@ -1,8 +1,8 @@
-import { isBoolean, isNumber, isString, isUndefined } from '@mudbean/is';
+import { isBoolean, isNumber, isString, isUndefined } from '@vvi/is';
 import { RunOtherCodeWaiting, waitingTipsParams } from './types';
 
 /**
- * 解析参数
+ * # 解析参数
  *
  * @param params  原始参数
  * @param parsingParameters  配置初始的参数，多用于一个已经 destroyed 的 waiting 又执行了 run

@@ -1,4 +1,4 @@
-import { bgBrightMagentaPen } from '@mudbean/pen';
+import { bgBrightMagentaPen } from '@vvi/pen';
 import { dog } from '../utils/dog';
 import { WaitingTipsResult } from '../waiting';
 import { organizeText } from './organizeText';

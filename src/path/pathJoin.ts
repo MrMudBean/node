@@ -6,7 +6,7 @@ import { join, normalize } from 'node:path';
  * @returns - 地址串联后经 path.normalize 处理后的地址
  * @example
  * ```ts
- *  import { pathJoin } from '@mudbean/node';
+ *  import { pathJoin } from '@vvi/node';
  *
  *  pathJoin('a','b','c'); // a/b/c
  *  pathJoin('a/','b/','c/'); // a/b/c/

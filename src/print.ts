@@ -4,15 +4,15 @@ import {
   isFunction,
   isTrue,
   typeOf,
-} from '@mudbean/is';
+} from '@vvi/is';
 import {
   colorPen,
   colorText,
   cutoffStringWithChar,
   randomPen,
   strInTerminalLength,
-} from '@mudbean/pen';
-import { isNode } from '@mudbean/utils';
+} from '@vvi/pen';
+import { isNode } from '@vvi/utils';
 import { dog } from './utils/dog';
 
 /**
@@ -71,7 +71,7 @@ export function _p(r: unknown = '', lineFeed: boolean = true): void {
  * @param color 中间文本的色彩
  * @example
  * ```ts
- * import { colorLine } from '@mudbean/node';
+ * import { colorLine } from '@vvi/node';
  *
  * colorLine(); // 彩色分割线
  * colorLine('就是玩'); // 彩色分割，中间有文本 “就是玩”

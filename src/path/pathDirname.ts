@@ -8,7 +8,7 @@ import { dirname } from 'node:path';
  * @example
  *
  * ```ts
- *  import { pathDirname } from '@mudbean/node';
+ *  import { pathDirname } from '@vvi/node';
  * ```
  */
 export function pathDirname(path: string) {

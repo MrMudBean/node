@@ -12,10 +12,10 @@ import { stderrDataCn } from './onStderrData';
 import { stdoutDataCn } from './onStdoutData';
 import { parse } from './parse';
 import { DataStore, RunOtherCodeOption, RunOtherCodeResult } from './types';
-import { isNull, isTrue } from '@mudbean/is';
+import { isNull, isTrue } from '@vvi/is';
 
 /**
- *  执行其他命令
+ * # 执行其他命令
  * @param options
  */
 export function runOtherCodeCore(

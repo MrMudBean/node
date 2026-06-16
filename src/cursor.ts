@@ -7,13 +7,13 @@
  * @copyright 2026 ©️ MrMudBean
  * @since 25-04-22 14:51
  * @version 4.4.2
- * @lastModified 2026-06-15 10:35
+ * @lastModified 2026-06-15 21:38
  */
 
 // import { dog } from './dog';
-import { isFalse, isNumber, isPlainObject, isUndefined } from '@mudbean/is';
-import { csi, esc } from '@mudbean/pen-static';
-import { isNode } from '@mudbean/utils';
+import { isFalse, isNumber, isPlainObject, isUndefined } from '@vvi/is';
+import { csi, esc } from '@vvi/pen-static';
+import { isNode } from '@vvi/utils';
 import { _p } from './print';
 
 /**

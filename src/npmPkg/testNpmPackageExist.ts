@@ -1,4 +1,4 @@
-import { isUndefined } from '@mudbean/is';
+import { isUndefined } from '@vvi/is';
 import { dog } from '../utils/dog';
 import { getNpmPkgInfo } from './getNpmPkgInfo';
 import { parseName } from './parseName';

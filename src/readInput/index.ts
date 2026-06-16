@@ -3,9 +3,7 @@ import { dataStore } from './dataStore';
 import { ReadInput, ReadInputKey, ReadInputParam } from './types';
 
 /**
- *
- *
- * ## 监听用户输入
+ * # 代理用户输入
  *
  * 请注意，在 `v4` 版本之后，与 `runOtherCode` 一致，不再直接退出程序，而是将后续交互留给用户自己处理
  *
@@ -15,10 +13,10 @@ import { ReadInput, ReadInputKey, ReadInputParam } from './types';
  * @example
  *
  * ```ts
- * import { isFalse } from 'a-type-of-js';
- * import { readInput , _p } from 'a-node-tools';
+ * import { isFalse } from '@vvi/is';
+ * import { readInput , _p } from '@vvi/node';
  *
- * /// 注册事件，并在回调中处理逻辑，在回调返回值为 true 时，结束当前的监听输入
+ * /// 注册事件，并在回调中处理逻辑，在回调返回值为 true 时，结束当前的输入代理
  * /// 当遭遇到意外的结束符号，一般是 `Ctrl` + `C` 时，v4 版本不再直接终端程序，而是返回 Promise<false>
  * const result = await readInput((keyValue, key) => {
  *   _p(keyValue, key);
@@ -50,9 +48,7 @@ import { ReadInput, ReadInputKey, ReadInputParam } from './types';
  *     shift: boolean;
  *     sequence: string;
  * }) => boolean
- *
  * ```
- *
  */
 export const readInput: ReadInput = ((
   _callback: ReadInputParam,

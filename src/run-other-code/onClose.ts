@@ -1,12 +1,10 @@
-import { isFunction } from '@mudbean/is';
+import { isFunction } from '@vvi/is';
 import { dog } from '../utils/dog';
 import { WaitingTipsResult } from '../waiting';
 import { RunOtherCodeResult, DataStore } from './types';
 
 /**
- *
- * 当执行关闭的时候
- *
+ * # 当执行关闭的时候
  * @param code
  * @param signal
  * @param resolve

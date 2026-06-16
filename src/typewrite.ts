@@ -1,6 +1,6 @@
-import { isString } from '@mudbean/is';
-import { boldPen, pen } from '@mudbean/pen';
-import { sleep } from '@mudbean/utils';
+import { isString } from '@vvi/is';
+import { boldPen, pen } from '@vvi/pen';
+import { sleep } from '@vvi/utils';
 import { _p } from './print';
 import { dog } from './utils/dog';
 
@@ -16,8 +16,8 @@ import { dog } from './utils/dog';
  * @example
  *
  * ```ts
- * import { redPen } from '@mudbean/is';
- * import { typewrite } form '@mudbean/node';
+ * import { redPen } from '@vvi/is';
+ * import { typewrite } form '@vvi/node';
  *
  *
  * await typewrite(`五十六个星座五十六${redPen`支花`}五十六族兄弟姐妹是一家`)

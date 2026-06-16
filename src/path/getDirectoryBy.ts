@@ -3,7 +3,7 @@ import { isExist } from '../file/isExist';
 import { dog } from '../utils/dog';
 import { pathDirname } from './pathDirname';
 import { pathJoin } from './pathJoin';
-import { isString, isZero } from '@mudbean/is';
+import { isString, isZero } from '@vvi/is';
 
 /** 根据给定的文件或文件夹名称找到父级目录
  *
@@ -13,7 +13,7 @@ import { isString, isZero } from '@mudbean/is';
  * @returns 在捕获到目标后会返回目标，否则则返回 undefined
  * @example
  * ```ts
- * import { getDirectoryBy, _p } from 'a-node-tools';
+ * import { getDirectoryBy, _p } from '@vvi/node';
  *
  * const result = getDirectoryBy('package.json');
  *

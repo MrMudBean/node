@@ -1,6 +1,6 @@
-# @mudbean/node
+# @vvi/node
 
-[![version](<https://img.shields.io/npm/v/@mudbean/node.svg?logo=npm&logoColor=rgb(0,0,0)&label=版本号&labelColor=rgb(73,73,228)&color=rgb(0,0,0)>)](https://www.npmjs.com/package/@mudbean/node) [![issues 提交](<https://img.shields.io/badge/issues-提交-rgb(255,0,63)?logo=github>)](https://github.com/MrMudBean/node/issues)
+[![version](<https://img.shields.io/npm/v/@vvi/node.svg?logo=npm&logoColor=rgb(0,0,0)&label=版本号&labelColor=rgb(73,73,228)&color=rgb(0,0,0)>)](https://www.npmjs.com/package/@vvi/node) [![issues 提交](<https://img.shields.io/badge/issues-提交-rgb(255,0,63)?logo=github>)](https://github.com/MrMudBean/node/issues)
 
 一个纯函数的工具，包含了
 
@@ -101,8 +101,8 @@ type npmRegistry = '官方' | '淘宝' | '腾讯' | '中科大' | 'yarn';
 例：
 
 ```js
-import { isTrue } from '@mudbean/is';
-import { readInput , _p} from "@mudbean/node";
+import { isTrue } from '@vvi/is';
+import { readInput , _p} from "@vvi/node";
 
 // 不建议使用异步函数，因为我想不到使用场景，所以移除了相关的判断
 const callBackFunction = (keyValue: string | undefined, key:any)
@@ -139,7 +139,7 @@ await main();
 一个简单的 `process.stdout.write` 的封装，用于在 node 环境向终端输入内容
 
 ```ts
-import { _p } from '@mudbean/node';
+import { _p } from '@vvi/node';
 
 _p('hello'); // hello
 
@@ -151,7 +151,7 @@ _p('hello', false); // hello （打印完不换行，光标依旧在 o 后面）
 一条彩色的分割线：
 
 ```ts
-import { colorLine } from '@mudbean/node';
+import { colorLine } from '@vvi/node';
 // 在 vs code extension 开发过程中发现未能正常打印，不知原因 
 
 colorLine(); // 打印一个彩色分割线
@@ -165,7 +165,7 @@ colorLine('就是玩', '#f21'); // 打印一个彩色分割线，中间是红色
 一个简单的打字机效果，用于在终端输入内容
 
 ```ts
-import { typewrite } from '@mudbean/node';
+import { typewrite } from '@vvi/node';
 
 await typewrite(
   '伟大的中华人民共和国万岁！\n伟大的中国共产党万岁！\n伟大的中国人民解放军万岁！\n全国各族人民大团结万岁！\n伟大的中国人民万岁！',
@@ -177,7 +177,7 @@ await typewrite(
 检测命令启动的包管理器
 
 ```ts
-import { detectPackageManager } from '@mudbean/node';
+import { detectPackageManager } from '@vvi/node';
 
 detectPackageManager(); // 返回值可能是： 'npm'、'yarn'、'pnpm'
 ```

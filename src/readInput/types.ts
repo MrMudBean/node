@@ -11,10 +11,10 @@ export type ReadInputListItem = {
 export type DataStore = {
   /**  按序执行列表  */
   list: symbol[];
-  /**  事件是否已执行监听  */
+  /**  事件是否已执代理  */
   listened: boolean;
   /**  注册动作
-   *  添加二点监听项
+   *  添加二点代理项
    *
    * 通过判断当前 callList 的长度知晓当前是否正在执行
    *

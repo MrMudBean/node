@@ -9,15 +9,15 @@ import {
   isFunction,
   isTrue,
   isUndefined,
-} from '@mudbean/is';
+} from '@vvi/is';
 
 const { stdin } = process;
 /**
  * # 创建一个共享的数据中心，用于储存当前的输入的需要
  *
- * 由于在使用的时候，因没有及时处理 process.stdout 的监听事件
+ * 由于在使用的时候，因没有及时处理 process.stdout 的事件代理
  *
- * 导致多次监听同事件而触发
+ * 导致多次代理同事件而触发
  *
  * ```sh
  *  MaxListenersExceededWarning: Possible EventEmitter memory leak detected.
@@ -71,9 +71,9 @@ export const dataStore: DataStore = {
       return false;
     }
     this.listened = false; // 设定初始化数据
-    // 当前执行栈中没有待执行的项，移除在 process 上的监听
+    // 当前执行栈中没有待执行的项，移除在 process 上的事件代理
     stdRemoveListener();
-    dog('监听已移除');
+    dog('代理已移除');
     return true;
   },
   del(this: DataStore, key: symbol): boolean {
@@ -109,7 +109,7 @@ export const dataStore: DataStore = {
 };
 
 /**
- * 移除监听项
+ * # 移除代理项
  */
 function stdRemoveListener() {
   stdin.removeListener('keypress', pressCallFn);
@@ -150,7 +150,7 @@ function pressCallFn(keyValue: string | undefined, key: unknown) {
   if (isFunction(callback)) {
     /**
      *  回调返回的是  true
-     *  则说明该方法已经结束，可以申请结束当前的移除监听工作
+     *  则说明该方法已经结束，可以申请结束当前的移除工作代理
      */
     if (isTrue(Reflect.apply(callback, null, [keyValue, key]))) {
       dog(
@@ -165,7 +165,7 @@ function pressCallFn(keyValue: string | undefined, key: unknown) {
       resolve(true);
     }
   } else {
-    // 移除监听
+    // 移除代理
     dataStore.remove();
     // 返回值
     resolve(false);
