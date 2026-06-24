@@ -1,7 +1,7 @@
 import { execSync } from 'node:child_process';
 
-import { dog } from './utils/dog';
 import { isNode } from '@vvi/utils';
+import { dog } from './utils/dog';
 
 /**
  *  # 当前是否是终端

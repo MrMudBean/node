@@ -1,8 +1,5 @@
 import { emitKeypressEvents } from 'node:readline';
 
-import { isTTY } from '../isTTY';
-import { dog } from '../utils/dog';
-import { DataStore, ReadInputListItem, ReadInputParam } from './types';
 import {
   isEmptyArray,
   isFalse,
@@ -10,6 +7,9 @@ import {
   isTrue,
   isUndefined,
 } from '@vvi/is';
+import { isTTY } from '../isTTY';
+import { dog } from '../utils/dog';
+import { DataStore, ReadInputListItem, ReadInputParam } from './types';
 
 const { stdin } = process;
 /**

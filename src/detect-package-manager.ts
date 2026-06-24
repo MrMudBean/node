@@ -1,9 +1,9 @@
 import { readFileSync } from 'node:fs';
 import { dirname } from 'node:path';
 
+import { isFalse } from '@vvi/is';
 import { fileExist, getPackageJsonSync } from './file/index';
 import { getDirectoryBy, pathJoin } from './path';
-import { isFalse } from '@vvi/is';
 
 /**
  *  # 检测当前的启动执行

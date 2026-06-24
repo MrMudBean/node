@@ -1,5 +1,6 @@
 import { spawn } from 'node:child_process';
 
+import { isNull, isTrue } from '@vvi/is';
 import { isWindows } from '../path';
 import { dog } from '../utils/dog';
 import { waitingTips, WaitingTipsResult } from '../waiting';
@@ -12,7 +13,6 @@ import { stderrDataCn } from './onStderrData';
 import { stdoutDataCn } from './onStdoutData';
 import { parse } from './parse';
 import { DataStore, RunOtherCodeOption, RunOtherCodeResult } from './types';
-import { isNull, isTrue } from '@vvi/is';
 
 /**
  * # 执行其他命令

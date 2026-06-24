@@ -1,4 +1,5 @@
 import https from 'node:https';
+import { isUndefined } from '@vvi/is';
 import { dog } from '../utils/dog';
 import { parseName } from './parseName';
 import {
@@ -7,7 +8,6 @@ import {
   npmPkgInfoType,
   npmRegistry,
 } from './types';
-import { isUndefined } from '@vvi/is';
 
 /**
  * # 获取给定 npm 包的内容的信息

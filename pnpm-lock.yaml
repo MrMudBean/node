@@ -27,12 +27,6 @@ importers:
       '@eslint/js':
         specifier: ^9.39.2
         version: 9.39.4
-      '@qqi/check-version':
-        specifier: ^1.1.0
-        version: 1.1.0
-      '@qqi/rollup-external':
-        specifier: ^1.1.0
-        version: 1.1.2
       '@rollup/plugin-commonjs':
         specifier: ^29.0.0
         version: 29.0.3(rollup@4.62.0)
@@ -51,15 +45,21 @@ importers:
       '@types/node':
         specifier: ^25.0.9
         version: 25.9.3
+      '@vvi/check-version':
+        specifier: ^1.1.1
+        version: 1.1.1
+      '@vvi/command':
+        specifier: ^4.0.0
+        version: 4.0.0
+      '@vvi/node':
+        specifier: ^4.4.3
+        version: 4.4.3
+      '@vvi/rollup-external':
+        specifier: ^1.2.1
+        version: 1.2.1
       '@vvi/table':
         specifier: ^0.2.2
         version: 0.2.2
-      a-command:
-        specifier: ^3.0.1
-        version: 3.0.1
-      a-node-tools:
-        specifier: ^4.4.2
-        version: 4.4.2
       eslint:
         specifier: ^9.39.2
         version: 9.39.4
@@ -241,23 +241,10 @@ packages:
     resolution: {integrity: sha512-SEeaJLb3qBNF/OaXnaR1NmmBbFYk1zC0ZH/52fATcRPLFg/p791YrcyFFy44Bo9sLaGuSuLp5Q6axbb/O+v/RA==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
-  '@qqi/check-version@1.1.0':
-    resolution: {integrity: sha512-LEPAuD04gfTQsAn0YzCYkrOpd6IP3og8xpgzWpMrkZMk/f+T7I+kWcr/xGFXBRWa7j/zlTR8CtqM0ebztC8J8Q==}
-    engines: {node: '>=18.0.0'}
-    hasBin: true
-
-  '@qqi/copy-text@1.1.0':
-    resolution: {integrity: sha512-scRGJG3xTZ+F2wcS1k9oGP21ta92rHRYztuu7/qtZk8hSo1PthAnup6CTxEsiYtc/Kmuhg2LQtDWWoFrUUVkYw==}
-    engines: {node: '>=18.0.0'}
-
   '@qqi/log@1.1.4':
     resolution: {integrity: sha512-UagMT6IbnRowKerk32f7LG4vyRCVQZ0s/VkH0l6EpY20dqLXsNgftQrghOK14BvTlsu3Cq1o2W9joeXsrK7how==}
     engines: {node: '>=18.0.0'}
     deprecated: 该包已经迁移到 @mudbean/log 且不再维护。请更新你的依赖
-
-  '@qqi/rollup-external@1.1.2':
-    resolution: {integrity: sha512-N6/KmWxhO8RKD79RbOe6uRTPvsTpodU8arlgGMG1c1e0vyymzyYGUoiiefxU4XX+BPQVgJwEQZtEf0tzrTL6/g==}
-    engines: {node: '>=18.0.0'}
 
   '@rollup/plugin-commonjs@29.0.3':
     resolution: {integrity: sha512-ZaOxZceP7SOUW7Lqw5IRVweSQYWaeIPnXIGLiB690EBA3FGJTO40EEr2L5yZplJWsgTCogILRSpcAe7+U0Otdg==}
@@ -669,12 +656,29 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@vvi/check-version@1.1.1':
+    resolution: {integrity: sha512-xWl8NBf1SD1u9ZlqmX2iceY+HEBxVb5PXWLIMgqpg9PEv6YqsSxXf/0cwZnmM2UycU68andMotOsZ/NAN3s3JQ==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
+
+  '@vvi/command@4.0.0':
+    resolution: {integrity: sha512-NbLUhklutbocOkLfjVCY/PeDevgrydQq7mQv2tk80VoSg9DyCN2YLxh7fTIhknYUUNzaylM66eZLQCcJT+s1zQ==}
+    engines: {node: '>=18.0.0'}
+
+  '@vvi/copy-text@1.1.1':
+    resolution: {integrity: sha512-JQK6TyCXQhWlWTEuftELG9cbOBDlFO3MmZ4nu5XpCVm5a4wfz4M7Sn6QH4aQUAmurZ1C04MWPusNCuXHlrK6PA==}
+    engines: {node: '>=18.0.0'}
+
   '@vvi/is@2.0.5':
     resolution: {integrity: sha512-DHp2dHi/dg3lWG3R10V6xuoffGhZJl9zNkpgqNry5RBW4kcXUtymswqJxbDhHFskllOqG8ommOQNhOLKeHxqkg==}
     engines: {node: '>=14.0.0'}
 
   '@vvi/log@1.1.5':
     resolution: {integrity: sha512-gculOp2tX0xTw9iLT3dffdPsJ/dqYnPDussM+qobN7e0+Y5cLt/1ykxExPbjO77l/XTphlZHmZgayecq3MyqrQ==}
+    engines: {node: '>=18.0.0'}
+
+  '@vvi/node@4.4.3':
+    resolution: {integrity: sha512-tIPL9YVl/HNNANHG/nxLLUq+A8njxwaQwaZtBomBWMd/fYVX6K1ISgwvhmx9QVrpPwo2/9rTvt6GA3kFVgr+xA==}
     engines: {node: '>=18.0.0'}
 
   '@vvi/pen-static@1.1.3':
@@ -685,6 +689,10 @@ packages:
     resolution: {integrity: sha512-v2hDkSmO8+ys73XtYV7R0MbeMmIOTRTGDFLJQtp/9VEtG786OmROU4U++NBT4qOy32clDfMAmop/DQ9CmXZ2ng==}
     engines: {node: '>=18.0.0'}
 
+  '@vvi/rollup-external@1.2.1':
+    resolution: {integrity: sha512-ynjYQX9EjjLygs82/wXd20d+h4hCkSkLh6kDSLFXyByGOMnjChdkBSxuPmJFjGWnJx7s7KC/ynVXKOF7SWZbbQ==}
+    engines: {node: '>=18.0.0'}
+
   '@vvi/table@0.2.2':
     resolution: {integrity: sha512-8Mg/iDuU82blpR3Kp22Y8u6j5IOvoDmVsJGEOJqmR97j7Hp0IJNv/VsNJOwjrXtbs2CBE4meejJU6+Su26+VyQ==}
     engines: {node: '>=18.0.0'}
@@ -692,11 +700,6 @@ packages:
   '@vvi/utils@2.0.6':
     resolution: {integrity: sha512-XfrhjMwZHtD31oLOnBDFJGRIxLZpZ+FIxeIEmVbn1G95+hPDBTYIVh+f+goCqZFp2+tzWqrh61Em55s41d9XlQ==}
     engines: {node: '>=18.0.0'}
-
-  a-command@3.0.1:
-    resolution: {integrity: sha512-lsqypyCjjyC8vLvPnnsqqsVqm1e4NzMtz3hFbI0Tf8l9hJCDy8njQnv0Kv42ZAGT0Ei4FLLOn6ulg7L80YwEAg==}
-    engines: {node: '>=18.0.0'}
-    hasBin: true
 
   a-js-tools@2.0.3:
     resolution: {integrity: sha512-MVsnn360IsTdi4vmqLk7jpObkyOuykBK7zbc6bTlI5E1mwMvsic8bQaP4838filIW3F7oPArMtJdJeDSwmURHw==}
@@ -2062,25 +2065,10 @@ snapshots:
 
   '@pkgr/core@0.3.6': {}
 
-  '@qqi/check-version@1.1.0': {}
-
-  '@qqi/copy-text@1.1.0':
-    dependencies:
-      a-js-tools: 2.0.3
-      a-node-tools: 4.4.2
-
   '@qqi/log@1.1.4':
     dependencies:
       '@color-pen/static': 1.1.1
       a-js-tools: 2.0.3
-      a-type-of-js: 2.0.2
-      color-pen: 3.0.0
-
-  '@qqi/rollup-external@1.1.2':
-    dependencies:
-      '@qqi/copy-text': 1.1.0
-      '@qqi/log': 1.1.4
-      a-node-tools: 4.4.2
       a-type-of-js: 2.0.2
       color-pen: 3.0.0
 
@@ -2407,11 +2395,40 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.12.2':
     optional: true
 
+  '@vvi/check-version@1.1.1':
+    dependencies:
+      '@vvi/command': 4.0.0
+      '@vvi/is': 2.0.5
+      '@vvi/node': 4.4.3
+      '@vvi/utils': 2.0.6
+
+  '@vvi/command@4.0.0':
+    dependencies:
+      '@vvi/is': 2.0.5
+      '@vvi/log': 1.1.5
+      '@vvi/node': 4.4.3
+      '@vvi/pen': 3.0.2
+      '@vvi/pen-static': 1.1.3
+      '@vvi/utils': 2.0.6
+
+  '@vvi/copy-text@1.1.1':
+    dependencies:
+      '@vvi/node': 4.4.3
+      '@vvi/utils': 2.0.6
+
   '@vvi/is@2.0.5': {}
 
   '@vvi/log@1.1.5':
     dependencies:
       '@vvi/is': 2.0.5
+      '@vvi/pen': 3.0.2
+      '@vvi/pen-static': 1.1.3
+      '@vvi/utils': 2.0.6
+
+  '@vvi/node@4.4.3':
+    dependencies:
+      '@vvi/is': 2.0.5
+      '@vvi/log': 1.1.5
       '@vvi/pen': 3.0.2
       '@vvi/pen-static': 1.1.3
       '@vvi/utils': 2.0.6
@@ -2424,6 +2441,14 @@ snapshots:
       '@vvi/pen-static': 1.1.3
       '@vvi/utils': 2.0.6
 
+  '@vvi/rollup-external@1.2.1':
+    dependencies:
+      '@vvi/copy-text': 1.1.1
+      '@vvi/is': 2.0.5
+      '@vvi/log': 1.1.5
+      '@vvi/node': 4.4.3
+      '@vvi/pen': 3.0.2
+
   '@vvi/table@0.2.2':
     dependencies:
       '@vvi/is': 2.0.5
@@ -2434,15 +2459,6 @@ snapshots:
   '@vvi/utils@2.0.6':
     dependencies:
       '@vvi/is': 2.0.5
-
-  a-command@3.0.1:
-    dependencies:
-      '@color-pen/static': 1.1.1
-      '@qqi/log': 1.1.4
-      a-js-tools: 2.0.3
-      a-node-tools: 4.4.2
-      a-type-of-js: 2.0.2
-      color-pen: 3.0.0
 
   a-js-tools@2.0.3:
     dependencies:

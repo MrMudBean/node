@@ -1,9 +1,9 @@
 import { resolve } from 'node:path';
+import { isString, isZero } from '@vvi/is';
 import { isExist } from '../file/isExist';
 import { dog } from '../utils/dog';
 import { pathDirname } from './pathDirname';
 import { pathJoin } from './pathJoin';
-import { isString, isZero } from '@vvi/is';
 
 /** 根据给定的文件或文件夹名称找到父级目录
  *

@@ -35,7 +35,10 @@ export type PackageJson<T extends DefaultT = DefaultT> = T & {
   license?: string;
   /**  问题  */
   bugs?: {
+    /** 链接地址 */
     url: string;
+    /** 指定的邮箱 */
+    email?: string;
   };
   /**  主页  */
   homepage?: string;
