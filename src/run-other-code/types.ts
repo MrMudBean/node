@@ -59,7 +59,7 @@ export type RunOtherCodeOptions = {
    *          - 3  前缀 ['👈','👆','👉','👇','🤘','🤟','🫳','🫴','👊']
    *          - 4  前缀 ['🌞','🌕','🌖','🌗' ,'🌜','🌘','🌑','🌒','🌓','🌛','🌔','🌔','🌔','🌝']
    */
-  waiting?: waitingTipsParams | WaitingTipsResult;
+  waiting?: waitingTipsParams;
 };
 
 /**
